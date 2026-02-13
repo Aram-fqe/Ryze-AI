@@ -23,10 +23,10 @@ export default function Chart({ data = [], type = 'bar', title }) {
                     {data.map((d, i) => (
                         <div key={i} className="flex-1 flex flex-col items-center gap-1 group relative">
                             <div
-                                className="w-full bg-indigo-100 rounded-t-sm group-hover:bg-indigo-200 transition-all duration-300 relative"
+                                className="w-full bg-gradient-to-t from-indigo-500 to-purple-500 rounded-t-md group-hover:from-indigo-600 group-hover:to-purple-600 transition-all duration-300 relative shadow-sm"
                                 style={{ height: `${(d.value / maxVal) * 100}%` }}
                             >
-                                <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-1.5 py-0.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none">
+                                <div className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs font-semibold px-2 py-1 rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10 pointer-events-none transform translate-y-2 group-hover:translate-y-0 duration-200">
                                     {d.value}
                                 </div>
                             </div>
